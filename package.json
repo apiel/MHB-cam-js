@@ -1,0 +1,20 @@
+{
+  "name": "mhb-cam-js",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js APP=mhb-cam-js",
+    "status": "systemctl status mhb-cam-js.service",
+    "prod": "sudo systemctl start mhb-cam-js",
+    "stop": "sudo systemctl stop mhb-cam-js",
+    "restart": "sudo systemctl restart mhb-cam-js",
+    "log": "journalctl -u mhb-cam-js.service -f"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "googleapis": "27",
+    "lodash": "^4.17.11"
+  }
+}
